@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{%block conteudo%}
+
+    
+    
+    {% for c in registro%}
+    <details>
+        <summary>{{c.pessoa}}</summary>
+        <p>{{c.idade}}</p>
+    </details>
+    {% endfor %}
+
+    <form action="{{url_for('sobre')}}" method="POST">
+    <label>Pessoa</label>
+    <input type="text" name="pessoa" required>
+    
+    
+    <label>Idade</label>
+    <input type="text" name="idade" required>
+    <button>Adicionar</button>
+</form>
+</ul>
+{%endblock conteudo%}

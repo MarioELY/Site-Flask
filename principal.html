@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    
+    <ul>
+    {% for c in pessoas %}
+        <li>{{c}}</li>
+    {% endfor %}
+    
+    <form action="{{url_for('principal')}}" method="POST">
+        <label>Aluno:</label>
+        <input type="text" name="aluno" required>
+        <button>Adicionar</button>
+    </form>
+
+</ul>
+{%endblock conteudo %}
